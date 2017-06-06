@@ -1,54 +1,70 @@
 <template>
   <div id="app">
-    <header>
-      <span>Vue.js PWA</span>
-    </header>
-    <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
-      <router-view></router-view>
-    </main>
+    <div class="container-fluid content-container">
+      Content Here
+    </div>
+
+    <div class="container-fluid tab-container">
+      <div class="tab-btn">
+        <icon name="home"></icon>
+      </div>
+      <div class="tab-btn">
+        <icon name="map-marker"></icon>
+      </div>
+      <div class="tab-btn">
+        <icon name="location-arrow"></icon>
+      </div>
+      <div class="tab-btn">
+        <icon name="cog"></icon>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app'
+  name: 'App'
 }
 </script>
 
-<style>
-body {
-  margin: 0;
-}
-
+<style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-main {
-  text-align: center;
-  margin-top: 40px;
+.content-container {
+  flex: 1;
 }
 
-header {
-  margin: 0;
-  height: 56px;
-  padding: 0 16px 0 24px;
-  background-color: #4fc08d;
-  color: #ffffff;
-}
+.tab-container {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
 
-header span {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: .02em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 16px;
+  border-style: solid;
+  border-width: 2px 0 0 0;
+  border-color: #eee;
+
+  .tab-btn {
+    font-size: 1.3em;
+    text-align: center;
+    color: #666;
+
+    flex: 1;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .tab-btn:active, .tab-btn:focus, .tab-btn:hover {
+    background-color: #fae8ef;
+  }
 }
 </style>
