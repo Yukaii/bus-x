@@ -107,7 +107,7 @@ export default {
 }
 
 .tab-container {
-  height: 64px;
+  height: 60px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -130,9 +130,13 @@ export default {
     align-content: center;
   }
 
-  .tab-btn:active, .tab-btn:focus, .tab-btn:hover {
+  .tab-btn:focus, .tab-btn:hover {
     color: #ca4769;
     background-color: #eee;
+  }
+
+  .tab-btn:active {
+    color: #ca4769;
   }
 }
 </style>
