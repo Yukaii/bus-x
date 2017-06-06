@@ -14,7 +14,7 @@
             <div class="route-dest">往國父紀念館</div>
           </div>
           <div class="route-name">萬隆</div>
-          <span class="badge badge-default badge-pill">3 min</span>
+          <span class="badge badge-default badge-pill badge-warning">3 min</span>
         </div>
         <div class="list-group-item list-group-item-action">
           <div class="route-detail">
@@ -22,7 +22,7 @@
             <div class="route-dest">往太原火車站</div>
           </div>
           <div class="route-name">大明國光路口</div>
-          <span class="badge badge-default badge-pill">15 min</span>
+          <span class="badge badge-default badge-pill badge-info">15 min</span>
         </div>
         <div class="list-group-item list-group-item-action">
           <div class="route-detail">
@@ -31,6 +31,14 @@
           </div>
           <div class="route-name">黎忠市場</div>
           <span class="badge badge-default badge-pill">未發車</span>
+        </div>
+        <div class="list-group-item list-group-item-action">
+          <div class="route-detail">
+            <div class="route-number">292</div>
+            <div class="route-dest">往二重</div>
+          </div>
+          <div class="route-name">信義通化街口</div>
+          <span class="badge badge-default badge-pill badge-danger">即將抵達</span>
         </div>
       </div>
     </div>
@@ -114,7 +122,7 @@ export default {
   padding: 0;
 
   border-style: solid;
-  border-width: 2px 0 0 0;
+  border-width: 1px 0 0 0;
   border-color: #eee;
 
   .tab-btn {
