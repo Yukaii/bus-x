@@ -1,10 +1,6 @@
 <template>
   <div id="app">
-    <nav class="navbar navbar-light bg-faded">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="搜尋路線">
-      </div>
-    </nav>
+    <search-navbar></search-navbar>
 
     <div class="container-fluid content-container">
       <div class="list-group route-list">
@@ -43,26 +39,20 @@
       </div>
     </div>
 
-    <div class="container-fluid tab-container">
-      <div class="tab-btn">
-        <icon name="home"></icon>
-      </div>
-      <div class="tab-btn">
-        <icon name="map-marker"></icon>
-      </div>
-      <div class="tab-btn">
-        <icon name="location-arrow"></icon>
-      </div>
-      <div class="tab-btn">
-        <icon name="cog"></icon>
-      </div>
-    </div>
+    <tab></tab>
   </div>
 </template>
 
 <script>
+import SearchNavbar from '@/components/SearchNavbar'
+import Tab from '@/components/Tab'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    SearchNavbar,
+    Tab
+  }
 }
 </script>
 
@@ -72,10 +62,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.navbar {
-  text-align: center;
 }
 
 .content-container {
@@ -111,40 +97,6 @@ export default {
         flex: 1;
       }
     }
-  }
-}
-
-.tab-container {
-  height: 60px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-
-  border-style: solid;
-  border-width: 1px 0 0 0;
-  border-color: #eee;
-
-  .tab-btn {
-    font-size: 1.3em;
-    text-align: center;
-    color: #666;
-
-    flex: 1;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-  }
-
-  .tab-btn:focus, .tab-btn:hover {
-    color: #ca4769;
-    background-color: #eee;
-  }
-
-  .tab-btn:active {
-    color: #ca4769;
   }
 }
 </style>
