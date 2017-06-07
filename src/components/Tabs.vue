@@ -1,17 +1,17 @@
 <template>
   <div class="container-fluid tab-container">
-    <div class="tab-btn">
+    <router-link class="tab-btn" to="/">
       <icon name="home"></icon>
-    </div>
-    <div class="tab-btn">
+    </router-link>
+    <router-link class="tab-btn" to="/nearby">
       <icon name="map-marker"></icon>
-    </div>
-    <div class="tab-btn">
+    </router-link>
+    <router-link class="tab-btn" to="/">
       <icon name="location-arrow"></icon>
-    </div>
-    <div class="tab-btn">
+    </router-link>
+    <router-link class="tab-btn" to="/">
       <icon name="cog"></icon>
-    </div>
+    </router-link>
   </div>
 </template>
 
